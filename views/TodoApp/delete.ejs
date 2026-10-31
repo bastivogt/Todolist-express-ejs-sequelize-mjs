@@ -1,0 +1,12 @@
+<%- include('../includes/_header') %>
+    <h1 style="color: red;"><%= title %></h1>
+    <p style="color: red;">Are you sure you want to delete the todo: "<%= todo.title %>"?</p>
+    <form action="/todos/destroy" method="post">
+        <input type="hidden" name="id" value="<%= todo.id %>">
+        <button type="submit">Delete Todo</button>
+    </form>
+    <p>
+        <a href="/todos">Back to Todos</a>
+    </p>
+
+<%- include('../includes/_footer') %>  

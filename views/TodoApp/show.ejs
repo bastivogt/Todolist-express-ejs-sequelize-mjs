@@ -1,0 +1,17 @@
+<%- include('../includes/_header') %>
+    <h1><%= title %><%= todo.completed ? ' [x]' : ' [ ]' %></h1>
+    <p><%= todo.text %></p>
+    <p>
+        <div>Created at: <%= todo.createdAt %></div>
+        <div>Updated at: <%= todo.updatedAt %></div>        
+
+    </p>
+    <p>
+        <a href="/todos/<%= todo.id %>/edit">Edit Todo</a>
+        <a href="/todos/<%= todo.id %>/delete" style="color: red;">Delete Todo</a>
+    </p>
+    <p>
+        <a href="/todos">Back to Todos</a>
+
+    </p>
+<%- include('../includes/_footer') %>   

@@ -1,0 +1,15 @@
+<%- include('../includes/_header') %>
+    <h1><%= title %></h1>
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+    <form action="/todos/<%= todo.id %>/update" method="POST" novalidate>
+        <%- include('includes/_todoForm', { error: error, todo: todo }) %>
+        <button type="submit">Update Todo</button>
+    </form>
+
+    <p>
+        <a href="/todos">Back to Todos</a>
+
+    </p>
+<%- include('../includes/_footer') %>   

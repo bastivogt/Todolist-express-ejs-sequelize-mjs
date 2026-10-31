@@ -1,0 +1,18 @@
+<div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="<%= todo.title %>" required>
+    <% if (error && !todo.title) { %>
+        <div style="color: red;">Title is required</div>
+    <% } %>
+</div>
+<div>
+    <label for="text">Text:</label>
+    <textarea id="text" name="text" required><%= todo.text %></textarea>
+    <% if (error && !todo.text) { %>
+        <div style="color: red;">Text is required</div>
+    <% } %>
+</div>
+<div>
+    <label for="completed">Completed:</label>
+    <input type="checkbox" id="completed" name="completed" <%= error ? (todo.completed ? 'checked' : '') : (todo.completed ? 'checked' : '') %>>
+</div>
