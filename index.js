@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
+// import routes for the Todo app
 import todoRoutes from "./apps/TodoApp/routes.js";
 
 const app = express();
